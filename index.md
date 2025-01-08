@@ -1,8 +1,7 @@
 # Cookbook: JavaScript
 
-- [Basics](https://androcado.github.io/)
-- [Functions](https://androcado.github.io/functions)
-
+- [Basics](https://androcado.github.io/cookbook-javascript)
+- [Functions](https://androcado.github.io/cookbook-javascript/functions)
 
 
 ## **1. Variables and Constants**

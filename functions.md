@@ -1,5 +1,9 @@
 # Cookbook: JavaScript
 
+- [Basics](https://androcado.github.io/cookbook-javascript)
+- [Functions](https://androcado.github.io/cookbook-javascript/functions)
+
+
 ## **1. Functions**
 ```javascript
 let x = 10;         // Mutable variable
