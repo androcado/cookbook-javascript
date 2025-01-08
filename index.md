@@ -1,6 +1,7 @@
 # Cookbook: JavaScript
 
 - [Basics](https://androcado.github.io/cookbook-javascript)
+- [Global Variables](https://androcado.github.io/cookbook-javascript/global-variables)
 - [Functions](https://androcado.github.io/cookbook-javascript/functions)
 
 
