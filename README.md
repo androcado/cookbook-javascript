@@ -1,5 +1,10 @@
 # Cookbook: JavaScript
 
+- [Basics](https://androcado.github.io/)
+- [Functions](https://androcado.github.io/functions)
+
+
+
 ## **1. Variables and Constants**
 ```javascript
 let x = 10;         // Mutable variable
@@ -251,3 +256,106 @@ element.appendChild(newElement);     // Add a child element
 element.addEventListener("click", () => {
   console.log("Clicked!");
 });
+```
+
+---
+
+## **14. Window - Global object in browser environments**
+```javascript
+
+console.log(window.document); // Access the DOM
+console.log(window.location.href); // Get the URL
+console.log(window.navigator.userAgent); // Get browser details
+console.log(window.history.length); // Number of entries in the session history
+console.log(window.screen.width); // Screen width
+
+console.log(window.innerWidth);  // Width of the content area
+console.log(window.innerHeight); // Height of the content area
+
+console.log(window.outerWidth);  // Width including browser decorations
+console.log(window.outerHeight); // Height including browser decorations
+
+console.log(window.screenX); // Horizontal position
+console.log(window.screenY); // Vertical position
+
+console.log(window.scrollX); // Horizontal scroll offset
+console.log(window.scrollY); // Vertical scroll offset
+
+
+console.log(window.performance.now()); // High-resolution timestamp
+
+setTimeout(() => console.log('Hello'), 1000); // Execute after 1 second
+
+setInterval(() => console.log('Tick'), 1000); // Execute every 1 second
+
+
+const timer = setTimeout(() => {}, 5000);
+clearTimeout(timer); // Cancel timeout
+
+
+
+
+window.alert('Hello, world!');
+
+const isConfirmed = window.confirm('Are you sure?');
+
+const name = window.prompt('What is your name?');
+
+const newWindow = window.open('https://example.com', '_blank');
+
+newWindow.close();
+
+
+
+
+
+
+
+
+
+
+
+
+
+window.onload = () => console.log('Page loaded!');
+window.onresize = () => console.log('Window resized!');
+
+
+window.onscroll = () => console.log('User scrolled!');
+
+
+
+window.onerror = (message, source, lineno, colno, error) => {
+  console.error(`Error: ${message} at ${source}:${lineno}:${colno}`);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+window.localStorage.setItem('key', 'value');
+console.log(window.localStorage.getItem('key'));
+
+
+window.sessionStorage.setItem('key', 'value');
+console.log(window.sessionStorage.getItem('key'));
+
+
+
+console.log(window.indexedDB); // Access the IndexedDB API
+
+
+
+
+
+
+
+```
