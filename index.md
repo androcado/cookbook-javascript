@@ -1,361 +1,1021 @@
 # Cookbook: JavaScript
 
 - [Basics](https://androcado.github.io/cookbook-javascript)
-- [Global Variables](https://androcado.github.io/cookbook-javascript/global-variables)
-- [Functions](https://androcado.github.io/cookbook-javascript/functions)
+- [Window Properties](https://androcado.github.io/cookbook-javascript/global-variables)
 
+# JavaScript CookBook
 
-## **1. Variables and Constants**
+## **1. Variables**
+| **Keyword**         | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| `var`              | Function-scoped variable, can be reassigned.      |
+| `let`              | Block-scoped variable, can be reassigned.         |
+| `const`            | Block-scoped constant, cannot be reassigned.      |
+
+### Examples:
 ```javascript
-let x = 10;         // Mutable variable
-const y = 20;       // Immutable variable
-var z = 30;         // Legacy syntax (global or function-scoped)
+var x = 10;        // Function-scoped
+let y = 20;        // Block-scoped
+const z = 30;      // Constant
 ```
 
 ---
 
 ## **2. Data Types**
-### **Primitive Types**
+| **Type**           | **Description**                                   |
+|--------------------|---------------------------------------------------|
+| `String`          | Represents textual data.                         |
+| `Number`          | Represents numerical data, including `NaN`.       |
+| `Boolean`         | Represents true/false values.                     |
+| `Undefined`       | Variable not assigned a value.                    |
+| `Null`            | Represents an intentional absence of value.       |
+| `Symbol`          | Unique, immutable values for object properties.   |
+| `BigInt`          | Represents integers larger than `Number.MAX_SAFE_INTEGER`. |
+
+### Examples:
 ```javascript
-let str = "Hello";   // String
-let num = 42;        // Number
+let str = "Hello";  // String
+def num = 42;       // Number
 let bool = true;     // Boolean
 let undef;           // Undefined
 let nul = null;      // Null
-let sym = Symbol();  // Unique symbol
-```
-
-### **Objects**
-```javascript
-let obj = { name: "John", age: 30 };  // Object
-let arr = [1, 2, 3];                 // Array
+let sym = Symbol();  // Symbol
+let big = 123n;      // BigInt
 ```
 
 ---
 
 ## **3. Operators**
 ### **Arithmetic Operators**
-```javascript
-x + y;   // Addition
-x - y;   // Subtraction
-x * y;   // Multiplication
-x / y;   // Division
-x % y;   // Modulo
-x ** y;  // Exponentiation
-```
+| **Operator**       | **Description**                                   |
+|--------------------|---------------------------------------------------|
+| `+`               | Addition                                          |
+| `-`               | Subtraction                                       |
+| `*`               | Multiplication                                   |
+| `/`               | Division                                         |
+| `%`               | Modulo (remainder)                               |
+| `**`              | Exponentiation                                   |
 
 ### **Comparison Operators**
-```javascript
-x === y;  // Strict equality (type and value)
-x == y;   // Loose equality (value only)
-x !== y;  // Strict inequality
-x > y;    // Greater than
-x < y;    // Less than
-```
+| **Operator**       | **Description**                                   |
+|--------------------|---------------------------------------------------|
+| `==`              | Equal to (loose comparison).                     |
+| `===`             | Equal to (strict comparison).                    |
+| `!=`              | Not equal to (loose comparison).                 |
+| `!==`             | Not equal to (strict comparison).                |
+| `>`               | Greater than.                                    |
+| `<`               | Less than.                                       |
+| `>=`              | Greater than or equal to.                        |
+| `<=`              | Less than or equal to.                           |
 
 ### **Logical Operators**
+| **Operator**       | **Description**                                   |
+|--------------------|---------------------------------------------------|
+| `&&`              | Logical AND.                                      |
+| `||`              | Logical OR.                                       |
+| `!`               | Logical NOT.                                      |
+
+### Examples:
 ```javascript
-x && y;   // AND
-x || y;   // OR
-!x;       // NOT
+console.log(5 > 3 && 10 > 5);  // true
+console.log(5 > 3 || 10 < 5);  // true
+console.log(!(5 > 3));         // false
 ```
 
 ---
 
-## **4. Functions**
-### **Regular Function**
-```javascript
-function add(a, b) {
-  return a + b;
-}
-```
+## **4. Control Structures**
+| **Structure**       | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| `if` / `else`      | Conditional execution based on boolean expressions. |
+| `switch`           | Executes code blocks based on matching cases.     |
+| `for`              | Iterates over a block of code a number of times.  |
+| `while`            | Loops while a condition is true.                  |
+| `do...while`       | Executes a block of code once, then repeats while true. |
 
-### **Arrow Function**
-```javascript
-const add = (a, b) => a + b;
-```
-
-### **Anonymous Function**
-```javascript
-setTimeout(function() {
-  console.log("Hello!");
-}, 1000);
-```
-
----
-
-## **5. Control Structures**
-### **if / else**
+### Examples:
 ```javascript
 if (x > 10) {
-  console.log("x is greater than 10");
+  console.log("Greater than 10");
 } else {
-  console.log("x is 10 or less");
+  console.log("10 or less");
 }
-```
 
-### **Switch**
-```javascript
 switch (x) {
   case 1:
     console.log("One");
     break;
-  case 2:
-    console.log("Two");
-    break;
   default:
-    console.log("Other number");
+    console.log("Other");
 }
-```
 
-### **Loops**
-```javascript
 for (let i = 0; i < 5; i++) {
-  console.log(i);  // Incrementing loop
+  console.log(i);
 }
-
-while (x > 0) {
-  x--;             // Decrementing loop
-}
-
-do {
-  x--;             // Execute at least once
-} while (x > 0);
 ```
 
 ---
 
-## **6. Arrays**
-### **Creation**
+## **5. Functions**
+| **Type**            | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| `function`          | Declares a named function.                        |
+| Arrow Functions     | Shorter syntax for functions, no `this` context. |
+
+### Examples:
 ```javascript
-let arr = [1, 2, 3];
+function add(a, b) {
+  return a + b;
+}
+
+const multiply = (a, b) => a * b;
 ```
 
-### **Methods**
+
+
+
+
+---
+
+## **6. Arrays**
+| **Method**          | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| `push`             | Adds an element to the end of the array.          |
+| `pop`              | Removes the last element.                         |
+| `shift`            | Removes the first element.                        |
+| `unshift`          | Adds an element to the beginning of the array.    |
+| `slice`            | Returns a shallow copy of a portion of an array.  |
+| `splice`           | Adds/removes elements in an array.                |
+| `map`              | Creates a new array with the results of calling a provided function on every element. |
+| `filter`           | Creates a new array with elements that pass the test implemented by a provided function. |
+| `reduce`           | Executes a reducer function on each element, resulting in a single output value. |
+
+### Examples:
 ```javascript
-arr.push(4);       // Add to the end
-arr.pop();         // Remove from the end
-arr.shift();       // Remove the first element
-arr.unshift(0);    // Add to the beginning
-arr.slice(1, 3);   // Extract a portion
-arr.splice(1, 2);  // Add/remove elements
-arr.map(x => x * 2); // Transform elements
-arr.filter(x => x > 1); // Filter elements
-arr.reduce((acc, val) => acc + val, 0); // Reduce to a single value
+let arr = [1, 2, 3];
+arr.push(4);       // [1, 2, 3, 4]
+arr.pop();         // [1, 2, 3]
+arr.slice(1, 2);   // [2]
+
+// Using map
+let doubled = arr.map(x => x * 2);  // [2, 4, 6]
+
+// Using filter
+let filtered = arr.filter(x => x > 1);  // [2, 3]
+
+// Using reduce
+let sum = arr.reduce((acc, val) => acc + val, 0);  // 6
 ```
 
 ---
 
 ## **7. Objects**
 ### **Creation**
+| **Method**          | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| Object Literal      | Creates an object using curly braces `{}`.        |
+| `Object.create()`   | Creates a new object with the specified prototype. |
+| Constructor Function| Creates an object using a constructor function.   |
+| `class`             | Creates objects using ES6 class syntax.           |
+
+### Examples:
 ```javascript
-let person = {
-  name: "John",
-  age: 30,
-  greet: function() {
-    console.log("Hello!");
+// Object Literal
+const obj = { name: "Alice", age: 25 };
+
+// Object.create
+const proto = { greet: function() { console.log("Hello"); } };
+const newObj = Object.create(proto);
+
+// Constructor Function
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+const person = new Person("Bob", 30);
+
+// Using Class
+class Animal {
+  constructor(type) {
+    this.type = type;
   }
-};
-```
-
-### **Access**
-```javascript
-person.name;   // Access property
-person["age"]; // Alternative access
-```
-
-### **Modification**
-```javascript
-person.job = "Developer"; // Add a property
-delete person.age;        // Remove a property
+}
+const dog = new Animal("Dog");
 ```
 
 ---
 
-## **8. Classes**
+### **Access**
+| **Method**          | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| Dot Notation        | Access properties using `.` syntax.               |
+| Bracket Notation    | Access properties using `[]` syntax.              |
+| Destructuring       | Extract values into variables.                    |
+
+### Examples:
 ```javascript
+const obj = { name: "Alice", age: 25 };
+
+// Dot Notation
+console.log(obj.name);  // "Alice"
+
+// Bracket Notation
+console.log(obj["age"]);  // 25
+
+// Destructuring
+const { name, age } = obj;
+console.log(name, age);  // "Alice", 25
+```
+
+---
+
+### **Modification**
+| **Method**          | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| Add Property        | Add a new property to an object.                  |
+| Modify Property     | Change the value of an existing property.          |
+| Delete Property     | Remove a property from an object.                  |
+
+### Examples:
+```javascript
+const obj = { name: "Alice", age: 25 };
+
+// Add Property
+obj.job = "Developer";
+console.log(obj);  // { name: "Alice", age: 25, job: "Developer" }
+
+// Modify Property
+obj.age = 26;
+console.log(obj);  // { name: "Alice", age: 26, job: "Developer" }
+
+// Delete Property
+delete obj.job;
+console.log(obj);  // { name: "Alice", age: 26 }
+```
+
+-----------------------|---------------------------------------------------|
+| `Object.keys`        | Returns an array of an object's keys.            |
+| `Object.values`      | Returns an array of an object's values.          |
+| `Object.entries`     | Returns an array of key-value pairs.             |
+| `Object.assign`      | Copies properties from one or more objects.      |
+
+### Examples:
+```javascript
+const obj = { a: 1, b: 2 };
+console.log(Object.keys(obj));   // ['a', 'b']
+console.log(Object.assign({}, obj)); // { a: 1, b: 2 }
+```
+
+---
+
+
+
+## **8. Classes**
+### **Definition**
+| **Component**      | **Description**                                   |
+|--------------------|---------------------------------------------------|
+| `class`           | Declares a new class.                             |
+| Constructor        | A method to initialize the class with properties. |
+| Methods            | Functions defined within a class.                 |
+
+### Examples:
+```javascript
+// Define a class
 class Person {
   constructor(name, age) {
     this.name = name;
     this.age = age;
   }
+
   greet() {
-    console.log(`Hello, my name is ${this.name}`);
+    console.log(`Hello, my name is ${this.name}.`);
   }
 }
-let john = new Person("John", 30);
-john.greet();
+
+// Create an instance
+const john = new Person("John", 30);
+john.greet();  // "Hello, my name is John."
+```
+
+---
+
+### **Inheritance**
+| **Component**      | **Description**                                   |
+|--------------------|---------------------------------------------------|
+| `extends`         | Creates a subclass that inherits properties and methods. |
+| `super`           | Calls the parent class's constructor or methods.  |
+
+### Examples:
+```javascript
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    console.log(`${this.name} makes a noise.`);
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name);  // Call parent constructor
+    this.breed = breed;
+  }
+
+  speak() {
+    console.log(`${this.name} barks.`);
+  }
+}
+
+const rex = new Dog("Rex", "Golden Retriever");
+rex.speak();  // "Rex barks."
+```
+
+---
+
+### **Static Methods and Properties**
+| **Component**      | **Description**                                   |
+|--------------------|---------------------------------------------------|
+| `static`          | Defines methods or properties that belong to the class, not instances. |
+
+### Examples:
+```javascript
+class MathUtils {
+  static add(a, b) {
+    return a + b;
+  }
+}
+
+console.log(MathUtils.add(2, 3));  // 5
+```
+
+----------------------|---------------------------------------------------|
+| `click`             | Triggered when an element is clicked.             |
+| `mousemove`         | Triggered when the mouse is moved.                |
+| `mousedown`         | Triggered when a mouse button is pressed.         |
+
+### **Keyboard Events**
+| **Event**            | **Description**                                   |
+|----------------------|---------------------------------------------------|
+| `keydown`           | Triggered when a key is pressed.                  |
+| `keyup`             | Triggered when a key is released.                 |
+
+### **Load and Transition Events**
+| **Event**            | **Description**                                   |
+|----------------------|---------------------------------------------------|
+| `load`              | Triggered when the page or a resource loads.       |
+| `transitionend`     | Triggered when a CSS transition finishes.          |
+
+### Examples:
+```javascript
+window.addEventListener("click", () => console.log("Clicked"));
+window.addEventListener("load", () => console.log("Page loaded"));
 ```
 
 ---
 
 ## **9. Modules**
-### **Export**
-```javascript
-export const x = 10;
-export default function() {
-  console.log("Default export");
-}
-```
+### **Exporting Modules**
+| **Keyword**      | **Description**                                   |
+|------------------|---------------------------------------------------|
+| `export`         | Exports variables, functions, or classes from a module. |
+| `export default` | Exports a single default variable, function, or class. |
 
-### **Import**
+### Examples:
 ```javascript
-import { x } from './module';
-import myFunction from './module';
+// Named Exports
+export const PI = 3.14;
+export function add(a, b) {
+  return a + b;
+}
+
+// Default Export
+export default function subtract(a, b) {
+  return a - b;
+}
 ```
 
 ---
 
-## **10. Asynchronous Programming**
-### **Promise**
+### **Importing Modules**
+| **Keyword**      | **Description**                                   |
+|------------------|---------------------------------------------------|
+| `import`         | Imports variables, functions, or classes from a module. |
+
+### Examples:
 ```javascript
-let promise = new Promise((resolve, reject) => {
-  resolve("Success!");
-});
-promise.then(result => console.log(result));
+// Importing Named Exports
+import { PI, add } from './math.js';
+console.log(PI);  // 3.14
+console.log(add(2, 3));  // 5
+
+// Importing Default Export
+import subtract from './math.js';
+console.log(subtract(5, 3));  // 2
 ```
 
-### **Async / Await**
+---
+
+### **Dynamic Imports**
+| **Keyword**      | **Description**                                   |
+|------------------|---------------------------------------------------|
+| `import()`       | Dynamically loads a module at runtime.            |
+
+### Examples:
+```javascript
+// Dynamic Import
+import('./math.js').then(module => {
+  console.log(module.add(2, 3));  // 5
+});
+```
+
+---
+
+
+---
+
+## **10. Asynchronous Programming**
+### **Promises**
+| **Method**       | **Description**                                   |
+|------------------|---------------------------------------------------|
+| `then`          | Executes a function when the promise is resolved. |
+| `catch`         | Executes a function when the promise is rejected. |
+| `finally`       | Executes a function after resolution or rejection. |
+
+### Examples:
+```javascript
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("Success!"), 1000);
+});
+
+promise
+  .then(result => console.log(result))  // "Success!"
+  .catch(error => console.error(error))
+  .finally(() => console.log("Done"));
+```
+
+---
+
+### **Async/Await**
+| **Keyword**       | **Description**                                   |
+|-------------------|---------------------------------------------------|
+| `async`           | Declares an asynchronous function.               |
+| `await`           | Waits for a promise to resolve or reject.        |
+
+### Examples:
 ```javascript
 async function fetchData() {
-  let response = await fetch("https://api.example.com/data");
-  let data = await response.json();
-  console.log(data);
+  try {
+    const response = await fetch("https://api.example.com/data");
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error("Error fetching data", error);
+  }
 }
+
 fetchData();
 ```
 
 ---
 
+### **Callbacks**
+| **Concept**       | **Description**                                   |
+|-------------------|---------------------------------------------------|
+| Callback Function | A function passed as an argument to another function, executed later. |
+
+### Examples:
+```javascript
+function fetchData(callback) {
+  setTimeout(() => {
+    const data = { name: "Alice", age: 30 };
+    callback(data);
+  }, 1000);
+}
+
+fetchData(data => console.log(data));  // { name: "Alice", age: 30 }
+```
+
+---
+
 ## **11. Error Handling**
+### **try/catch/finally**
+| **Block**       | **Description**                                   |
+|-----------------|---------------------------------------------------|
+| `try`          | Defines a block of code to test for errors.       |
+| `catch`        | Handles errors that occur in the `try` block.     |
+| `finally`      | Executes code after `try` and `catch`, regardless of the outcome. |
+
+### Examples:
 ```javascript
 try {
-  throw new Error("Something went wrong!");
-} catch (err) {
-  console.log(err.message);
+  const data = JSON.parse('{"name": "Alice"}');
+  console.log(data.name); // "Alice"
+} catch (error) {
+  console.error("Parsing error", error);
 } finally {
-  console.log("Done");
+  console.log("Execution completed");
 }
 ```
 
 ---
 
-## **12. DOM Manipulation**
+### **Throwing Errors**
+| **Keyword**     | **Description**                                   |
+|-----------------|---------------------------------------------------|
+| `throw`        | Throws a custom error.                            |
+
+### Examples:
 ```javascript
-document.getElementById("id");        // Select element by ID
-document.querySelector(".class");    // Select element by CSS selector
-document.createElement("div");       // Create a new element
-element.textContent = "Hello!";      // Set text content
-element.appendChild(newElement);     // Add a child element
+function checkAge(age) {
+  if (age < 18) {
+    throw new Error("Age must be at least 18.");
+  }
+  console.log("Access granted.");
+}
+
+try {
+  checkAge(15);
+} catch (error) {
+  console.error(error.message); // "Age must be at least 18."
+}
 ```
 
 ---
 
-## **13. Event Handling**
+
+## **12. DOM Manipulation**
+### **Selecting Elements**
+| **Method**                  | **Description**                                   |
+|-----------------------------|---------------------------------------------------|
+| `document.getElementById()` | Selects an element by its ID.                    |
+| `document.querySelector()`  | Selects the first element matching a CSS selector. |
+| `document.querySelectorAll()` | Selects all elements matching a CSS selector.    |
+| `document.getElementsByClassName()` | Selects elements by class name.           |
+| `document.getElementsByTagName()` | Selects elements by tag name.              |
+
+### Examples:
 ```javascript
-element.addEventListener("click", () => {
-  console.log("Clicked!");
+const element = document.getElementById("header");
+const items = document.querySelectorAll(".list-item");
+console.log(items[0]);
+```
+
+---
+
+### **Modifying Elements**
+| **Property/Method**         | **Description**                                   |
+|-----------------------------|---------------------------------------------------|
+| `textContent`               | Sets or gets the text content of an element.      |
+| `innerHTML`                 | Sets or gets the HTML content of an element.      |
+| `style`                     | Modifies the inline styles of an element.         |
+| `setAttribute()`            | Sets an attribute on an element.                 |
+| `removeAttribute()`         | Removes an attribute from an element.            |
+
+### Examples:
+```javascript
+const element = document.getElementById("header");
+element.textContent = "Welcome!"; // Updates text
+
+const button = document.querySelector(".btn");
+button.setAttribute("disabled", "true"); // Adds 'disabled' attribute
+button.removeAttribute("disabled"); // Removes 'disabled' attribute
+```
+
+---
+
+### **Creating and Appending Elements**
+| **Method**                  | **Description**                                   |
+|-----------------------------|---------------------------------------------------|
+| `document.createElement()`  | Creates a new element.                           |
+| `appendChild()`             | Appends a child element.                         |
+| `insertBefore()`            | Inserts an element before another element.       |
+| `removeChild()`             | Removes a child element.                         |
+
+### Examples:
+```javascript
+const newDiv = document.createElement("div");
+newDiv.textContent = "Hello, World!";
+document.body.appendChild(newDiv);
+
+const parent = document.getElementById("list");
+const newItem = document.createElement("li");
+newItem.textContent = "New Item";
+parent.insertBefore(newItem, parent.firstChild);
+```
+
+---
+
+### **Event Listeners**
+| **Method**                  | **Description**                                   |
+|-----------------------------|---------------------------------------------------|
+| `addEventListener()`        | Attaches an event handler to an element.         |
+| `removeEventListener()`     | Removes an event handler from an element.        |
+
+### Examples:
+```javascript
+const button = document.querySelector(".btn");
+
+function handleClick() {
+  console.log("Button clicked!");
+}
+
+button.addEventListener("click", handleClick);
+button.removeEventListener("click", handleClick);
+```
+
+---
+
+
+## **13. Event Handling**
+### **Common Events**
+| **Event**            | **Description**                                   |
+|----------------------|---------------------------------------------------|
+| `click`             | Triggered when an element is clicked.             |
+| `dblclick`          | Triggered when an element is double-clicked.      |
+| `mouseover`         | Triggered when the mouse pointer is over an element. |
+| `mouseout`          | Triggered when the mouse pointer leaves an element. |
+| `keydown`           | Triggered when a key is pressed.                  |
+| `keyup`             | Triggered when a key is released.                 |
+| `change`            | Triggered when the value of an input element changes. |
+| `submit`            | Triggered when a form is submitted.               |
+
+### Examples:
+```javascript
+const button = document.querySelector(".btn");
+
+// Click event
+button.addEventListener("click", () => {
+  console.log("Button clicked!");
+});
+
+// Keydown event
+document.addEventListener("keydown", (event) => {
+  console.log(`Key pressed: ${event.key}`);
 });
 ```
 
 ---
 
-## **14. Window - Global object in browser environments**
+### **Event Propagation**
+| **Phase**            | **Description**                                   |
+|----------------------|---------------------------------------------------|
+| Capturing Phase      | Events propagate from the root to the target element. |
+| Target Phase         | The event reaches the target element.            |
+| Bubbling Phase       | Events propagate back from the target to the root. |
+
+### Examples:
 ```javascript
+const parent = document.getElementById("parent");
+const child = document.getElementById("child");
 
-console.log(window.document); // Access the DOM
-console.log(window.location.href); // Get the URL
-console.log(window.navigator.userAgent); // Get browser details
-console.log(window.history.length); // Number of entries in the session history
-console.log(window.screen.width); // Screen width
+// Event capturing
+parent.addEventListener(
+  "click",
+  () => console.log("Parent (capturing)"),
+  true // Use capturing phase
+);
 
-console.log(window.innerWidth);  // Width of the content area
-console.log(window.innerHeight); // Height of the content area
-
-console.log(window.outerWidth);  // Width including browser decorations
-console.log(window.outerHeight); // Height including browser decorations
-
-console.log(window.screenX); // Horizontal position
-console.log(window.screenY); // Vertical position
-
-console.log(window.scrollX); // Horizontal scroll offset
-console.log(window.scrollY); // Vertical scroll offset
-
-
-console.log(window.performance.now()); // High-resolution timestamp
-
-setTimeout(() => console.log('Hello'), 1000); // Execute after 1 second
-
-setInterval(() => console.log('Tick'), 1000); // Execute every 1 second
-
-
-const timer = setTimeout(() => {}, 5000);
-clearTimeout(timer); // Cancel timeout
-
-
-
-
-window.alert('Hello, world!');
-
-const isConfirmed = window.confirm('Are you sure?');
-
-const name = window.prompt('What is your name?');
-
-const newWindow = window.open('https://example.com', '_blank');
-
-newWindow.close();
-
-
-
-
-
-
-
-
-
-
-
-
-
-window.onload = () => console.log('Page loaded!');
-window.onresize = () => console.log('Window resized!');
-
-
-window.onscroll = () => console.log('User scrolled!');
-
-
-
-window.onerror = (message, source, lineno, colno, error) => {
-  console.error(`Error: ${message} at ${source}:${lineno}:${colno}`);
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-window.localStorage.setItem('key', 'value');
-console.log(window.localStorage.getItem('key'));
-
-
-window.sessionStorage.setItem('key', 'value');
-console.log(window.sessionStorage.getItem('key'));
-
-
-
-console.log(window.indexedDB); // Access the IndexedDB API
-
-
-
-
-
-
-
+// Event bubbling
+child.addEventListener("click", () => console.log("Child (bubbling)"));
 ```
+
+---
+
+### **Event Delegation**
+| **Concept**          | **Description**                                   |
+|----------------------|---------------------------------------------------|
+| Delegation           | Use a parent element to handle events for its children. |
+
+### Examples:
+```javascript
+const list = document.getElementById("list");
+
+list.addEventListener("click", (event) => {
+  if (event.target.tagName === "LI") {
+    console.log(`Clicked on item: ${event.target.textContent}`);
+  }
+});
+```
+
+---
+
+### **Preventing Default Behavior**
+| **Method**           | **Description**                                   |
+|----------------------|---------------------------------------------------|
+| `event.preventDefault()` | Prevents the default action of an event.        |
+
+### Examples:
+```javascript
+const link = document.querySelector("a");
+
+link.addEventListener("click", (event) => {
+  event.preventDefault();
+  console.log("Link click prevented.");
+});
+```
+
+
+## **14. Window Properties and Methods**
+### **Window Properties**
+| **Property**         | **Description**                                   |
+|----------------------|---------------------------------------------------|
+| `window`            | The global window object itself.                  |
+| `innerHeight`       | Height of the viewport in pixels.                 |
+| `innerWidth`        | Width of the viewport in pixels.                  |
+| `outerHeight`       | Height of the window including browser chrome.    |
+| `outerWidth`        | Width of the window including browser chrome.     |
+| `screenX`           | Horizontal position of the window relative to the screen. |
+| `screenY`           | Vertical position of the window relative to the screen.   |
+| `location`          | Provides information about the URL of the window. |
+| `history`           | Provides access to the browser's session history. |
+| `navigator`         | Provides information about the browser and device.|
+| `localStorage`      | Provides access to the browser's local storage.   |
+| `sessionStorage`    | Provides access to the browser's session storage. |
+| `performance`       | Provides performance-related information.         |
+| `document`          | The DOM document object of the current page.      |
+
+### Examples:
+```javascript
+console.log(window.innerHeight); // Logs the viewport height
+console.log(window.location.href); // Logs the current URL
+console.log(window.navigator.userAgent); // Logs browser details
+```
+
+---
+
+### **Window Methods**
+| **Method**           | **Description**                                   |
+|----------------------|---------------------------------------------------|
+| `alert()`           | Displays an alert dialog.                         |
+| `confirm()`         | Displays a confirmation dialog.                   |
+| `prompt()`          | Displays a dialog to accept user input.           |
+| `open()`            | Opens a new browser tab or window.                |
+| `close()`           | Closes the current window.                        |
+| `focus()`           | Brings the window to the foreground.              |
+| `blur()`            | Removes focus from the window.                    |
+| `scrollTo()`        | Scrolls to a specified position in the window.    |
+| `setTimeout()`      | Executes a function after a specified delay.       |
+| `clearTimeout()`    | Cancels a timeout set with `setTimeout()`.         |
+| `setInterval()`     | Executes a function at specified intervals.        |
+| `clearInterval()`   | Cancels an interval set with `setInterval()`.      |
+| `requestAnimationFrame()` | Requests a frame for performing animations. |
+| `cancelAnimationFrame()` | Cancels an animation frame request.           |
+
+### Examples:
+```javascript
+window.alert("Hello, World!");
+const timer = setTimeout(() => console.log("Executed after 2 seconds"), 2000);
+clearTimeout(timer); // Cancels the timeout
+```
+
+---
+
+### **Navigator Properties**
+| **Property**         | **Description**                                   |
+|----------------------|---------------------------------------------------|
+| `userAgent`         | Returns the user agent string for the browser.    |
+| `platform`          | Provides information about the platform (OS).     |
+| `language`          | Returns the browser's language setting.           |
+| `onLine`            | Indicates if the browser is online.               |
+
+### Examples:
+```javascript
+console.log(window.navigator.userAgent); // Logs browser's user agent
+console.log(window.navigator.language); // Logs browser language
+```
+
+---
+
+### **Location Object**
+| **Property/Method**  | **Description**                                   |
+|----------------------|---------------------------------------------------|
+| `href`              | Gets or sets the entire URL of the window.        |
+| `reload()`          | Reloads the current document.                     |
+| `replace()`         | Replaces the current document with a new one.     |
+| `assign()`          | Loads a new document.                             |
+
+### Examples:
+```javascript
+console.log(window.location.href); // Logs current URL
+window.location.reload(); // Reloads the page
+```
+
+---## **13. Event Handling**
+### **Common Events**
+| **Event**            | **Description**                                   |
+|----------------------|---------------------------------------------------|
+| `click`             | Triggered when an element is clicked.             |
+| `dblclick`          | Triggered when an element is double-clicked.      |
+| `mouseover`         | Triggered when the mouse pointer is over an element. |
+| `mouseout`          | Triggered when the mouse pointer leaves an element. |
+| `keydown`           | Triggered when a key is pressed.                  |
+| `keyup`             | Triggered when a key is released.                 |
+| `change`            | Triggered when the value of an input element changes. |
+| `submit`            | Triggered when a form is submitted.               |
+
+### Examples:
+```javascript
+const button = document.querySelector(".btn");
+
+// Click event
+button.addEventListener("click", () => {
+  console.log("Button clicked!");
+});
+
+// Keydown event
+document.addEventListener("keydown", (event) => {
+  console.log(`Key pressed: ${event.key}`);
+});
+```
+
+---
+
+### **Event Propagation**
+| **Phase**            | **Description**                                   |
+|----------------------|---------------------------------------------------|
+| Capturing Phase      | Events propagate from the root to the target element. |
+| Target Phase         | The event reaches the target element.            |
+| Bubbling Phase       | Events propagate back from the target to the root. |
+
+### Examples:
+```javascript
+const parent = document.getElementById("parent");
+const child = document.getElementById("child");
+
+// Event capturing
+parent.addEventListener(
+  "click",
+  () => console.log("Parent (capturing)"),
+  true // Use capturing phase
+);
+
+// Event bubbling
+child.addEventListener("click", () => console.log("Child (bubbling)"));
+```
+
+---
+
+### **Event Delegation**
+| **Concept**          | **Description**                                   |
+|----------------------|---------------------------------------------------|
+| Delegation           | Use a parent element to handle events for its children. |
+
+### Examples:
+```javascript
+const list = document.getElementById("list");
+
+list.addEventListener("click", (event) => {
+  if (event.target.tagName === "LI") {
+    console.log(`Clicked on item: ${event.target.textContent}`);
+  }
+});
+```
+
+---
+
+### **Preventing Default Behavior**
+| **Method**           | **Description**                                   |
+|----------------------|---------------------------------------------------|
+| `event.preventDefault()` | Prevents the default action of an event.        |
+
+### Examples:
+```javascript
+const link = document.querySelector("a");
+
+link.addEventListener("click", (event) => {
+  event.preventDefault();
+  console.log("Link click prevented.");
+});
+```
+
+
+---
+
+
+## **14. Window Properties and Methods**
+
+### **Window Properties**
+| **Property**         | **Description**                                   |
+|----------------------|---------------------------------------------------|
+| `window`            | The global window object itself.                  |
+| `innerHeight`       | Height of the viewport in pixels.                 |
+| `innerWidth`        | Width of the viewport in pixels.                  |
+| `outerHeight`       | Height of the window including browser chrome.    |
+| `outerWidth`        | Width of the window including browser chrome.     |
+| `screenX`           | Horizontal position of the window relative to the screen. |
+| `screenY`           | Vertical position of the window relative to the screen.   |
+| `location`          | Provides information about the URL of the window. |
+| `history`           | Provides access to the browser's session history. |
+| `navigator`         | Provides information about the browser and device.|
+| `localStorage`      | Provides access to the browser's local storage.   |
+| `sessionStorage`    | Provides access to the browser's session storage. |
+| `performance`       | Provides performance-related information.         |
+| `document`          | The DOM document object of the current page.      |
+
+### Examples:
+```javascript
+console.log(window); // Logs the global window object
+console.log(window.innerHeight); // Logs the viewport height in pixels
+console.log(window.outerWidth); // Logs the total width of the browser window
+console.log(window.screenX); // Logs the horizontal screen position of the window
+console.log(window.screenY); // Logs the vertical screen position of the window
+console.log(window.location.href); // Logs the current URL of the page
+console.log(window.history.length); // Logs the number of entries in the session history
+console.log(window.navigator.userAgent); // Logs the browser's user agent string
+console.log(window.localStorage); // Logs the local storage object
+console.log(window.sessionStorage); // Logs the session storage object
+console.log(window.performance.now()); // Logs a high-resolution timestamp
+console.log(window.document.title); // Logs the title of the document
+```
+
+---
+
+### **Window Methods**
+| **Method**           | **Description**                                   |
+|----------------------|---------------------------------------------------|
+| `alert()`           | Displays an alert dialog.                         |
+| `confirm()`         | Displays a confirmation dialog.                   |
+| `prompt()`          | Displays a dialog to accept user input.           |
+| `open()`            | Opens a new browser tab or window.                |
+| `close()`           | Closes the current window.                        |
+| `focus()`           | Brings the window to the foreground.              |
+| `blur()`            | Removes focus from the window.                    |
+| `scrollTo()`        | Scrolls to a specified position in the window.    |
+| `setTimeout()`      | Executes a function after a specified delay.       |
+| `clearTimeout()`    | Cancels a timeout set with `setTimeout()`.         |
+| `setInterval()`     | Executes a function at specified intervals.        |
+| `clearInterval()`   | Cancels an interval set with `setInterval()`.      |
+| `requestAnimationFrame()` | Requests a frame for performing animations. |
+| `cancelAnimationFrame()` | Cancels an animation frame request.           |
+
+### Examples:
+```javascript
+// Alert dialog
+window.alert("Hello, World!");
+
+// Confirmation dialog
+const isConfirmed = window.confirm("Are you sure?");
+console.log(isConfirmed); // Logs true or false
+
+// Prompt dialog
+const userName = window.prompt("What is your name?");
+console.log(userName); // Logs the entered name
+
+// Open and close a window
+const newWindow = window.open("https://example.com", "_blank");
+newWindow.close(); // Closes the new window
+
+// Scrolling
+window.scrollTo(0, 100); // Scrolls to 100px from the top
+
+// Timer methods
+const timer = setTimeout(() => console.log("Executed after 2 seconds"), 2000);
+clearTimeout(timer); // Cancels the timeout
+
+const interval = setInterval(() => console.log("Interval log"), 1000);
+clearInterval(interval); // Cancels the interval
+
+// Request animation frame
+const animationId = window.requestAnimationFrame(() => console.log("Frame rendered"));
+window.cancelAnimationFrame(animationId); // Cancels the animation frame
+```
+
+---
+
+### **Navigator Properties**
+| **Property**         | **Description**                                   |
+|----------------------|---------------------------------------------------|
+| `userAgent`         | Returns the user agent string for the browser.    |
+| `platform`          | Provides information about the platform (OS).     |
+| `language`          | Returns the browser's language setting.           |
+| `onLine`            | Indicates if the browser is online.               |
+
+### Examples:
+```javascript
+console.log(window.navigator.userAgent); // Logs the browser's user agent string
+console.log(window.navigator.platform); // Logs the platform (e.g., "Win32")
+console.log(window.navigator.language); // Logs the browser's language (e.g., "en-US")
+console.log(window.navigator.onLine); // Logs true if the browser is online
+```
+
+---
+
+### **Location Object**
+| **Property/Method**  | **Description**                                   |
+|----------------------|---------------------------------------------------|
+| `href`              | Gets or sets the entire URL of the window.        |
+| `reload()`          | Reloads the current document.                     |
+| `replace()`         | Replaces the current document with a new one.     |
+| `assign()`          | Loads a new document.                             |
+
+### Examples:
+```javascript
+console.log(window.location.href); // Logs the current URL
+window.location.reload(); // Reloads the current page
+window.location.assign("https://example.com"); // Navigates to a new URL
+window.location.replace("https://example.com"); // Replaces the current URL
+```
+
+---
