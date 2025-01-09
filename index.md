@@ -8,9 +8,9 @@
 ## **1. Variables**
 | **Keyword**         | **Description**                                   |
 |---------------------|---------------------------------------------------|
-| `var`              | Function-scoped variable, can be reassigned.      |
-| `let`              | Block-scoped variable, can be reassigned.         |
-| `const`            | Block-scoped constant, cannot be reassigned.      |
+| `var`               | Function-scoped variable, can be reassigned.      |
+| `let`               | Block-scoped variable, can be reassigned.         |
+| `const`             | Block-scoped constant, cannot be reassigned.      |
 
 ### Examples:
 ```javascript
@@ -22,15 +22,15 @@ const z = 30;      // Constant
 ---
 
 ## **2. Data Types**
-| **Type**           | **Description**                                   |
-|--------------------|---------------------------------------------------|
-| `String`          | Represents textual data.                         |
-| `Number`          | Represents numerical data, including `NaN`.       |
-| `Boolean`         | Represents true/false values.                     |
-| `Undefined`       | Variable not assigned a value.                    |
-| `Null`            | Represents an intentional absence of value.       |
-| `Symbol`          | Unique, immutable values for object properties.   |
-| `BigInt`          | Represents integers larger than `Number.MAX_SAFE_INTEGER`. |
+| **Type**            | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| `String`           | Represents textual data.                           |
+| `Number`           | Represents numerical data, including `NaN`.        |
+| `Boolean`          | Represents true/false values.                      |
+| `Undefined`        | Variable not assigned a value.                     |
+| `Null`             | Represents an intentional absence of value.        |
+| `Symbol`           | Unique, immutable values for object properties.    |
+| `BigInt`           | Represents integers larger than `Number.MAX_SAFE_INTEGER`. |
 
 ### Examples:
 ```javascript
@@ -47,33 +47,33 @@ let big = 123n;      // BigInt
 
 ## **3. Operators**
 ### **Arithmetic Operators**
-| **Operator**       | **Description**                                   |
-|--------------------|---------------------------------------------------|
-| `+`               | Addition                                          |
-| `-`               | Subtraction                                       |
-| `*`               | Multiplication                                   |
-| `/`               | Division                                         |
-| `%`               | Modulo (remainder)                               |
-| `**`              | Exponentiation                                   |
+| **Operator**        | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| `+`                 | Addition                                          |
+| `-`                 | Subtraction                                       |
+| `*`                 | Multiplication                                    |
+| `/`                 | Division                                          |
+| `%`                 | Modulo (remainder)                                |
+| `**`                | Exponentiation                                    |
 
 ### **Comparison Operators**
-| **Operator**       | **Description**                                   |
-|--------------------|---------------------------------------------------|
-| `==`              | Equal to (loose comparison).                     |
-| `===`             | Equal to (strict comparison).                    |
-| `!=`              | Not equal to (loose comparison).                 |
-| `!==`             | Not equal to (strict comparison).                |
-| `>`               | Greater than.                                    |
-| `<`               | Less than.                                       |
-| `>=`              | Greater than or equal to.                        |
-| `<=`              | Less than or equal to.                           |
+| **Operator**        | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| `==`                | Equal to (loose comparison).                      |
+| `===`               | Equal to (strict comparison).                     |
+| `!=`                | Not equal to (loose comparison).                  |
+| `!==`               | Not equal to (strict comparison).                 |
+| `>`                 | Greater than.                                     |
+| `<`                 | Less than.                                        |
+| `>=`                | Greater than or equal to.                         |
+| `<=`                | Less than or equal to.                            |
 
 ### **Logical Operators**
-| **Operator**       | **Description**                                   |
-|--------------------|---------------------------------------------------|
-| `&&`              | Logical AND.                                      |
-| `||`              | Logical OR.                                       |
-| `!`               | Logical NOT.                                      |
+| **Operator**        | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| `&&`               | Logical AND.                                       |
+| `||`               | Logical OR.                                        |
+| `!`                | Logical NOT.                                       |
 
 ### Examples:
 ```javascript
@@ -87,11 +87,11 @@ console.log(!(5 > 3));         // false
 ## **4. Control Structures**
 | **Structure**       | **Description**                                   |
 |---------------------|---------------------------------------------------|
-| `if` / `else`      | Conditional execution based on boolean expressions. |
-| `switch`           | Executes code blocks based on matching cases.     |
-| `for`              | Iterates over a block of code a number of times.  |
-| `while`            | Loops while a condition is true.                  |
-| `do...while`       | Executes a block of code once, then repeats while true. |
+| `if` / `else`       | Conditional execution based on boolean expressions. |
+| `switch`            | Executes code blocks based on matching cases.     |
+| `for`               | Iterates over a block of code a number of times.  |
+| `while`             | Loops while a condition is true.                  |
+| `do...while`        | Executes a block of code once, then repeats while true. |
 
 ### Examples:
 ```javascript
@@ -120,7 +120,7 @@ for (let i = 0; i < 5; i++) {
 | **Type**            | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `function`          | Declares a named function.                        |
-| Arrow Functions     | Shorter syntax for functions, no `this` context. |
+| Arrow Functions     | Shorter syntax for functions, no `this` context.  |
 
 ### Examples:
 ```javascript
@@ -140,15 +140,15 @@ const multiply = (a, b) => a * b;
 ## **6. Arrays**
 | **Method**          | **Description**                                   |
 |---------------------|---------------------------------------------------|
-| `push`             | Adds an element to the end of the array.          |
-| `pop`              | Removes the last element.                         |
-| `shift`            | Removes the first element.                        |
-| `unshift`          | Adds an element to the beginning of the array.    |
-| `slice`            | Returns a shallow copy of a portion of an array.  |
-| `splice`           | Adds/removes elements in an array.                |
-| `map`              | Creates a new array with the results of calling a provided function on every element. |
-| `filter`           | Creates a new array with elements that pass the test implemented by a provided function. |
-| `reduce`           | Executes a reducer function on each element, resulting in a single output value. |
+| `push`              | Adds an element to the end of the array.          |
+| `pop`               | Removes the last element.                         |
+| `shift`             | Removes the first element.                        |
+| `unshift`           | Adds an element to the beginning of the array.    |
+| `slice`             | Returns a shallow copy of a portion of an array.  |
+| `splice`            | Adds/removes elements in an array.                |
+| `map`               | Creates a new array with the results of calling a provided function on every element. |
+| `filter`            | Creates a new array with elements that pass the test implemented by a provided function. |
+| `reduce`            | Executes a reducer function on each element, resulting in a single output value. |
 
 ### Examples:
 ```javascript
@@ -233,8 +233,8 @@ console.log(name, age);  // "Alice", 25
 | **Method**          | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | Add Property        | Add a new property to an object.                  |
-| Modify Property     | Change the value of an existing property.          |
-| Delete Property     | Remove a property from an object.                  |
+| Modify Property     | Change the value of an existing property.         |
+| Delete Property     | Remove a property from an object.                 |
 
 ### Examples:
 ```javascript
@@ -253,11 +253,11 @@ delete obj.job;
 console.log(obj);  // { name: "Alice", age: 26 }
 ```
 
------------------------|---------------------------------------------------|
-| `Object.keys`        | Returns an array of an object's keys.            |
-| `Object.values`      | Returns an array of an object's values.          |
-| `Object.entries`     | Returns an array of key-value pairs.             |
-| `Object.assign`      | Copies properties from one or more objects.      |
+|---------------------|---------------------------------------------------|
+| `Object.keys`       | Returns an array of an object's keys.             |
+| `Object.values`     | Returns an array of an object's values.           |
+| `Object.entries`    | Returns an array of key-value pairs.              |
+| `Object.assign`     | Copies properties from one or more objects.       |
 
 ### Examples:
 ```javascript
@@ -272,11 +272,11 @@ console.log(Object.assign({}, obj)); // { a: 1, b: 2 }
 
 ## **8. Classes**
 ### **Definition**
-| **Component**      | **Description**                                   |
-|--------------------|---------------------------------------------------|
-| `class`           | Declares a new class.                             |
-| Constructor        | A method to initialize the class with properties. |
-| Methods            | Functions defined within a class.                 |
+| **Component**       | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| `class`             | Declares a new class.                             |
+| Constructor         | A method to initialize the class with properties. |
+| Methods             | Functions defined within a class.                 |
 
 ### Examples:
 ```javascript
@@ -300,10 +300,10 @@ john.greet();  // "Hello, my name is John."
 ---
 
 ### **Inheritance**
-| **Component**      | **Description**                                   |
-|--------------------|---------------------------------------------------|
-| `extends`         | Creates a subclass that inherits properties and methods. |
-| `super`           | Calls the parent class's constructor or methods.  |
+| **Component**       | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| `extends`           | Creates a subclass that inherits properties and methods. |
+| `super`             | Calls the parent class's constructor or methods. |
 
 ### Examples:
 ```javascript
@@ -335,9 +335,9 @@ rex.speak();  // "Rex barks."
 ---
 
 ### **Static Methods and Properties**
-| **Component**      | **Description**                                   |
-|--------------------|---------------------------------------------------|
-| `static`          | Defines methods or properties that belong to the class, not instances. |
+| **Component**       | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| `static`            | Defines methods or properties that belong to the class, not instances. |
 
 ### Examples:
 ```javascript
@@ -350,22 +350,22 @@ class MathUtils {
 console.log(MathUtils.add(2, 3));  // 5
 ```
 
-----------------------|---------------------------------------------------|
+|---------------------|---------------------------------------------------|
 | `click`             | Triggered when an element is clicked.             |
 | `mousemove`         | Triggered when the mouse is moved.                |
 | `mousedown`         | Triggered when a mouse button is pressed.         |
 
 ### **Keyboard Events**
-| **Event**            | **Description**                                   |
-|----------------------|---------------------------------------------------|
+| **Event**           | **Description**                                   |
+|---------------------|---------------------------------------------------|
 | `keydown`           | Triggered when a key is pressed.                  |
 | `keyup`             | Triggered when a key is released.                 |
 
 ### **Load and Transition Events**
-| **Event**            | **Description**                                   |
-|----------------------|---------------------------------------------------|
-| `load`              | Triggered when the page or a resource loads.       |
-| `transitionend`     | Triggered when a CSS transition finishes.          |
+| **Event**           | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| `load`              | Triggered when the page or a resource loads.      |
+| `transitionend`     | Triggered when a CSS transition finishes.         |
 
 ### Examples:
 ```javascript
@@ -377,10 +377,10 @@ window.addEventListener("load", () => console.log("Page loaded"));
 
 ## **9. Modules**
 ### **Exporting Modules**
-| **Keyword**      | **Description**                                   |
-|------------------|---------------------------------------------------|
-| `export`         | Exports variables, functions, or classes from a module. |
-| `export default` | Exports a single default variable, function, or class. |
+| **Keyword**         | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| `export`            | Exports variables, functions, or classes from a module. |
+| `export default`    | Exports a single default variable, function, or class. |
 
 ### Examples:
 ```javascript
@@ -399,9 +399,9 @@ export default function subtract(a, b) {
 ---
 
 ### **Importing Modules**
-| **Keyword**      | **Description**                                   |
-|------------------|---------------------------------------------------|
-| `import`         | Imports variables, functions, or classes from a module. |
+| **Keyword**         | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| `import`            | Imports variables, functions, or classes from a module. |
 
 ### Examples:
 ```javascript
@@ -418,9 +418,9 @@ console.log(subtract(5, 3));  // 2
 ---
 
 ### **Dynamic Imports**
-| **Keyword**      | **Description**                                   |
-|------------------|---------------------------------------------------|
-| `import()`       | Dynamically loads a module at runtime.            |
+| **Keyword**         | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| `import()`          | Dynamically loads a module at runtime.            |
 
 ### Examples:
 ```javascript
@@ -437,11 +437,11 @@ import('./math.js').then(module => {
 
 ## **10. Asynchronous Programming**
 ### **Promises**
-| **Method**       | **Description**                                   |
-|------------------|---------------------------------------------------|
-| `then`          | Executes a function when the promise is resolved. |
-| `catch`         | Executes a function when the promise is rejected. |
-| `finally`       | Executes a function after resolution or rejection. |
+| **Method**          | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| `then`              | Executes a function when the promise is resolved. |
+| `catch`             | Executes a function when the promise is rejected. |
+| `finally`           | Executes a function after resolution or rejection. |
 
 ### Examples:
 ```javascript
@@ -458,10 +458,10 @@ promise
 ---
 
 ### **Async/Await**
-| **Keyword**       | **Description**                                   |
-|-------------------|---------------------------------------------------|
-| `async`           | Declares an asynchronous function.               |
-| `await`           | Waits for a promise to resolve or reject.        |
+| **Keyword**         | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| `async`             | Declares an asynchronous function.                |
+| `await`             | Waits for a promise to resolve or reject.         |
 
 ### Examples:
 ```javascript
@@ -481,9 +481,9 @@ fetchData();
 ---
 
 ### **Callbacks**
-| **Concept**       | **Description**                                   |
-|-------------------|---------------------------------------------------|
-| Callback Function | A function passed as an argument to another function, executed later. |
+| **Concept**         | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| Callback Function   | A function passed as an argument to another function, executed later. |
 
 ### Examples:
 ```javascript
@@ -501,11 +501,11 @@ fetchData(data => console.log(data));  // { name: "Alice", age: 30 }
 
 ## **11. Error Handling**
 ### **try/catch/finally**
-| **Block**       | **Description**                                   |
-|-----------------|---------------------------------------------------|
-| `try`          | Defines a block of code to test for errors.       |
-| `catch`        | Handles errors that occur in the `try` block.     |
-| `finally`      | Executes code after `try` and `catch`, regardless of the outcome. |
+| **Block**           | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| `try`               | Defines a block of code to test for errors.       |
+| `catch`             | Handles errors that occur in the `try` block.     |
+| `finally`           | Executes code after `try` and `catch`, regardless of the outcome. |
 
 ### Examples:
 ```javascript
@@ -522,9 +522,9 @@ try {
 ---
 
 ### **Throwing Errors**
-| **Keyword**     | **Description**                                   |
-|-----------------|---------------------------------------------------|
-| `throw`        | Throws a custom error.                            |
+| **Keyword**         | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| `throw`             | Throws a custom error.                            |
 
 ### Examples:
 ```javascript
@@ -547,13 +547,13 @@ try {
 
 ## **12. DOM Manipulation**
 ### **Selecting Elements**
-| **Method**                  | **Description**                                   |
-|-----------------------------|---------------------------------------------------|
-| `document.getElementById()` | Selects an element by its ID.                    |
-| `document.querySelector()`  | Selects the first element matching a CSS selector. |
-| `document.querySelectorAll()` | Selects all elements matching a CSS selector.    |
-| `document.getElementsByClassName()` | Selects elements by class name.           |
-| `document.getElementsByTagName()` | Selects elements by tag name.              |
+| **Method**                         | **Description**                                    |
+|------------------------------------|----------------------------------------------------|
+| `document.getElementById()`        | Selects an element by its ID.                      |
+| `document.querySelector()`         | Selects the first element matching a CSS selector. |
+| `document.querySelectorAll()`      | Selects all elements matching a CSS selector.      |
+| `document.getElementsByClassName()`| Selects elements by class name.                    |
+| `document.getElementsByTagName()`  | Selects elements by tag name.                      |
 
 ### Examples:
 ```javascript
@@ -565,13 +565,13 @@ console.log(items[0]);
 ---
 
 ### **Modifying Elements**
-| **Property/Method**         | **Description**                                   |
-|-----------------------------|---------------------------------------------------|
-| `textContent`               | Sets or gets the text content of an element.      |
-| `innerHTML`                 | Sets or gets the HTML content of an element.      |
-| `style`                     | Modifies the inline styles of an element.         |
-| `setAttribute()`            | Sets an attribute on an element.                 |
-| `removeAttribute()`         | Removes an attribute from an element.            |
+| **Property/Method**                | **Description**                                    |
+|------------------------------------|----------------------------------------------------|
+| `textContent`                      | Sets or gets the text content of an element.       |
+| `innerHTML`                        | Sets or gets the HTML content of an element.       |
+| `style`                            | Modifies the inline styles of an element.          |
+| `setAttribute()`                   | Sets an attribute on an element.                   |
+| `removeAttribute()`                | Removes an attribute from an element.              |
 
 ### Examples:
 ```javascript
@@ -586,12 +586,12 @@ button.removeAttribute("disabled"); // Removes 'disabled' attribute
 ---
 
 ### **Creating and Appending Elements**
-| **Method**                  | **Description**                                   |
-|-----------------------------|---------------------------------------------------|
-| `document.createElement()`  | Creates a new element.                           |
-| `appendChild()`             | Appends a child element.                         |
-| `insertBefore()`            | Inserts an element before another element.       |
-| `removeChild()`             | Removes a child element.                         |
+| **Method**                         | **Description**                                    |
+|------------------------------------|----------------------------------------------------|
+| `document.createElement()`         | Creates a new element.                             |
+| `appendChild()`                    | Appends a child element.                           |
+| `insertBefore()`                   | Inserts an element before another element.         |
+| `removeChild()`                    | Removes a child element.                           |
 
 ### Examples:
 ```javascript
@@ -608,10 +608,10 @@ parent.insertBefore(newItem, parent.firstChild);
 ---
 
 ### **Event Listeners**
-| **Method**                  | **Description**                                   |
-|-----------------------------|---------------------------------------------------|
-| `addEventListener()`        | Attaches an event handler to an element.         |
-| `removeEventListener()`     | Removes an event handler from an element.        |
+| **Method**                         | **Description**                                    |
+|------------------------------------|----------------------------------------------------|
+| `addEventListener()`               | Attaches an event handler to an element.           |
+| `removeEventListener()`            | Removes an event handler from an element.          |
 
 ### Examples:
 ```javascript
@@ -630,8 +630,8 @@ button.removeEventListener("click", handleClick);
 
 ## **13. Event Handling**
 ### **Common Events**
-| **Event**            | **Description**                                   |
-|----------------------|---------------------------------------------------|
+| **Event**           | **Description**                                   |
+|---------------------|---------------------------------------------------|
 | `click`             | Triggered when an element is clicked.             |
 | `dblclick`          | Triggered when an element is double-clicked.      |
 | `mouseover`         | Triggered when the mouse pointer is over an element. |
@@ -659,11 +659,11 @@ document.addEventListener("keydown", (event) => {
 ---
 
 ### **Event Propagation**
-| **Phase**            | **Description**                                   |
-|----------------------|---------------------------------------------------|
-| Capturing Phase      | Events propagate from the root to the target element. |
-| Target Phase         | The event reaches the target element.            |
-| Bubbling Phase       | Events propagate back from the target to the root. |
+| **Phase**           | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| Capturing Phase     | Events propagate from the root to the target element. |
+| Target Phase        | The event reaches the target element.             |
+| Bubbling Phase      | Events propagate back from the target to the root. |
 
 ### Examples:
 ```javascript
@@ -684,9 +684,9 @@ child.addEventListener("click", () => console.log("Child (bubbling)"));
 ---
 
 ### **Event Delegation**
-| **Concept**          | **Description**                                   |
-|----------------------|---------------------------------------------------|
-| Delegation           | Use a parent element to handle events for its children. |
+| **Concept**         | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| Delegation          | Use a parent element to handle events for its children. |
 
 ### Examples:
 ```javascript
@@ -702,9 +702,9 @@ list.addEventListener("click", (event) => {
 ---
 
 ### **Preventing Default Behavior**
-| **Method**           | **Description**                                   |
-|----------------------|---------------------------------------------------|
-| `event.preventDefault()` | Prevents the default action of an event.        |
+| **Method**               | **Description**                                   |
+|--------------------------|---------------------------------------------------|
+| `event.preventDefault()` | Prevents the default action of an event.          |
 
 ### Examples:
 ```javascript
@@ -719,8 +719,8 @@ link.addEventListener("click", (event) => {
 
 ## **14. Window Properties and Methods**
 ### **Window Properties**
-| **Property**         | **Description**                                   |
-|----------------------|---------------------------------------------------|
+| **Property**        | **Description**                                   |
+|---------------------|---------------------------------------------------|
 | `window`            | The global window object itself.                  |
 | `innerHeight`       | Height of the viewport in pixels.                 |
 | `innerWidth`        | Width of the viewport in pixels.                  |
@@ -746,8 +746,8 @@ console.log(window.navigator.userAgent); // Logs browser details
 ---
 
 ### **Window Methods**
-| **Method**           | **Description**                                   |
-|----------------------|---------------------------------------------------|
+| **Method**          | **Description**                                   |
+|---------------------|---------------------------------------------------|
 | `alert()`           | Displays an alert dialog.                         |
 | `confirm()`         | Displays a confirmation dialog.                   |
 | `prompt()`          | Displays a dialog to accept user input.           |
@@ -756,12 +756,12 @@ console.log(window.navigator.userAgent); // Logs browser details
 | `focus()`           | Brings the window to the foreground.              |
 | `blur()`            | Removes focus from the window.                    |
 | `scrollTo()`        | Scrolls to a specified position in the window.    |
-| `setTimeout()`      | Executes a function after a specified delay.       |
-| `clearTimeout()`    | Cancels a timeout set with `setTimeout()`.         |
-| `setInterval()`     | Executes a function at specified intervals.        |
-| `clearInterval()`   | Cancels an interval set with `setInterval()`.      |
+| `setTimeout()`      | Executes a function after a specified delay.      |
+| `clearTimeout()`    | Cancels a timeout set with `setTimeout()`.        |
+| `setInterval()`     | Executes a function at specified intervals.       |
+| `clearInterval()`   | Cancels an interval set with `setInterval()`.     |
 | `requestAnimationFrame()` | Requests a frame for performing animations. |
-| `cancelAnimationFrame()` | Cancels an animation frame request.           |
+| `cancelAnimationFrame()` | Cancels an animation frame request.          |
 
 ### Examples:
 ```javascript
@@ -773,8 +773,8 @@ clearTimeout(timer); // Cancels the timeout
 ---
 
 ### **Navigator Properties**
-| **Property**         | **Description**                                   |
-|----------------------|---------------------------------------------------|
+| **Property**        | **Description**                                   |
+|---------------------|---------------------------------------------------|
 | `userAgent`         | Returns the user agent string for the browser.    |
 | `platform`          | Provides information about the platform (OS).     |
 | `language`          | Returns the browser's language setting.           |
@@ -789,8 +789,8 @@ console.log(window.navigator.language); // Logs browser language
 ---
 
 ### **Location Object**
-| **Property/Method**  | **Description**                                   |
-|----------------------|---------------------------------------------------|
+| **Property/Method** | **Description**                                   |
+|---------------------|---------------------------------------------------|
 | `href`              | Gets or sets the entire URL of the window.        |
 | `reload()`          | Reloads the current document.                     |
 | `replace()`         | Replaces the current document with a new one.     |
@@ -804,8 +804,8 @@ window.location.reload(); // Reloads the page
 
 ---## **13. Event Handling**
 ### **Common Events**
-| **Event**            | **Description**                                   |
-|----------------------|---------------------------------------------------|
+| **Event**           | **Description**                                   |
+|---------------------|---------------------------------------------------|
 | `click`             | Triggered when an element is clicked.             |
 | `dblclick`          | Triggered when an element is double-clicked.      |
 | `mouseover`         | Triggered when the mouse pointer is over an element. |
@@ -833,11 +833,11 @@ document.addEventListener("keydown", (event) => {
 ---
 
 ### **Event Propagation**
-| **Phase**            | **Description**                                   |
-|----------------------|---------------------------------------------------|
-| Capturing Phase      | Events propagate from the root to the target element. |
-| Target Phase         | The event reaches the target element.            |
-| Bubbling Phase       | Events propagate back from the target to the root. |
+| **Phase**           | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| Capturing Phase     | Events propagate from the root to the target element. |
+| Target Phase        | The event reaches the target element.             |
+| Bubbling Phase      | Events propagate back from the target to the root. |
 
 ### Examples:
 ```javascript
@@ -858,9 +858,9 @@ child.addEventListener("click", () => console.log("Child (bubbling)"));
 ---
 
 ### **Event Delegation**
-| **Concept**          | **Description**                                   |
-|----------------------|---------------------------------------------------|
-| Delegation           | Use a parent element to handle events for its children. |
+| **Concept**         | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| Delegation          | Use a parent element to handle events for its children. |
 
 ### Examples:
 ```javascript
@@ -876,9 +876,9 @@ list.addEventListener("click", (event) => {
 ---
 
 ### **Preventing Default Behavior**
-| **Method**           | **Description**                                   |
-|----------------------|---------------------------------------------------|
-| `event.preventDefault()` | Prevents the default action of an event.        |
+| **Method**          | **Description**                                   |
+|---------------------|---------------------------------------------------|
+| `event.preventDefault()` | Prevents the default action of an event.     |
 
 ### Examples:
 ```javascript
@@ -897,8 +897,8 @@ link.addEventListener("click", (event) => {
 ## **14. Window Properties and Methods**
 
 ### **Window Properties**
-| **Property**         | **Description**                                   |
-|----------------------|---------------------------------------------------|
+| **Property**        | **Description**                                   |
+|---------------------|---------------------------------------------------|
 | `window`            | The global window object itself.                  |
 | `innerHeight`       | Height of the viewport in pixels.                 |
 | `innerWidth`        | Width of the viewport in pixels.                  |
@@ -933,8 +933,8 @@ console.log(window.document.title); // Logs the title of the document
 ---
 
 ### **Window Methods**
-| **Method**           | **Description**                                   |
-|----------------------|---------------------------------------------------|
+| **Method**          | **Description**                                   |
+|---------------------|---------------------------------------------------|
 | `alert()`           | Displays an alert dialog.                         |
 | `confirm()`         | Displays a confirmation dialog.                   |
 | `prompt()`          | Displays a dialog to accept user input.           |
@@ -943,12 +943,12 @@ console.log(window.document.title); // Logs the title of the document
 | `focus()`           | Brings the window to the foreground.              |
 | `blur()`            | Removes focus from the window.                    |
 | `scrollTo()`        | Scrolls to a specified position in the window.    |
-| `setTimeout()`      | Executes a function after a specified delay.       |
-| `clearTimeout()`    | Cancels a timeout set with `setTimeout()`.         |
-| `setInterval()`     | Executes a function at specified intervals.        |
-| `clearInterval()`   | Cancels an interval set with `setInterval()`.      |
+| `setTimeout()`      | Executes a function after a specified delay.      |
+| `clearTimeout()`    | Cancels a timeout set with `setTimeout()`.        |
+| `setInterval()`     | Executes a function at specified intervals.       |
+| `clearInterval()`   | Cancels an interval set with `setInterval()`.     |
 | `requestAnimationFrame()` | Requests a frame for performing animations. |
-| `cancelAnimationFrame()` | Cancels an animation frame request.           |
+| `cancelAnimationFrame()` | Cancels an animation frame request.          |
 
 ### Examples:
 ```javascript
@@ -985,8 +985,8 @@ window.cancelAnimationFrame(animationId); // Cancels the animation frame
 ---
 
 ### **Navigator Properties**
-| **Property**         | **Description**                                   |
-|----------------------|---------------------------------------------------|
+| **Property**        | **Description**                                   |
+|---------------------|---------------------------------------------------|
 | `userAgent`         | Returns the user agent string for the browser.    |
 | `platform`          | Provides information about the platform (OS).     |
 | `language`          | Returns the browser's language setting.           |
@@ -1003,8 +1003,8 @@ console.log(window.navigator.onLine); // Logs true if the browser is online
 ---
 
 ### **Location Object**
-| **Property/Method**  | **Description**                                   |
-|----------------------|---------------------------------------------------|
+| **Property/Method** | **Description**                                   |
+|---------------------|---------------------------------------------------|
 | `href`              | Gets or sets the entire URL of the window.        |
 | `reload()`          | Reloads the current document.                     |
 | `replace()`         | Replaces the current document with a new one.     |
