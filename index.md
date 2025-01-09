@@ -5,6 +5,29 @@
 
 # JavaScript CookBook
 
+# Table of Contents
+- [1. Variables](#1-variables)
+- [2. Data Types](#2-data-types)
+  - [Feature 1](#feature-1)
+  - [Feature 2](#feature-2)
+- [3. Operators](#3-operators)
+- [4. Control Structures](#4-control-structures)
+- [6. Arrays](#6-arrays)
+- [7. Objects](#7-objects)
+- [8. Classes](#8-classes)
+- [9. Modules](#9-modules)
+- [10. Asynchronous Programming](#10-asynchronous-programming)
+- [11. Error Handling](#11-error-handling)
+- [12. DOM Manipulation](#12-dom-manipulation)
+- [13. Event Handlingn](#13-event-handling)
+- [14. Window Properties and Methods](#14-window-properties-and-methods)
+- [15. Event Handling](#15-event-handling)
+- [16. Window Properties and Methods](#16-window-properties-and-methods)
+
+
+---
+
+
 ## **1. Variables**
 
 | **Keyword**         | **Description**                                   |
@@ -838,7 +861,7 @@ window.location.reload(); // Reloads the page
 
 ---
 
-## **13. Event Handling**
+## **15. Event Handling**
 ### **Common Events**
 
 | **Event**           | **Description**                                   |
@@ -934,7 +957,7 @@ link.addEventListener("click", (event) => {
 ---
 
 
-## **14. Window Properties and Methods**
+## **16. Window Properties and Methods**
 
 ### **Window Properties**
 
