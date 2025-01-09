@@ -45,27 +45,17 @@
   - [Event Propagation](#event-propagation)
   - [Event Delegation](#event-delegation)
   - [Preventing Default Behavior](#preventing-default-behavior)
-- [14. Window Properties and Methods](#14-window-properties-and-methods)
+- [14. Window Properties and Methods](#16-window-properties-and-methods)
   - [Window Properties](#window-properties)
   - [Window Methods](#window-methods)
   - [Navigator Properties](#navigator-properties)
   - [Location Object](#location-object)
-- [15. Event Handling](#15-event-handling)
-  - [Common Events](#common-events)
-  - [Event Propagation](#event-propagation)
-  - [Event Delegation](#event-delegation)
-  - [Preventing Default Behavior](#preventing-default-behavior)
-- [16. Window Properties and Methods](#16-window-properties-and-methods)
-  - [Window Properties](#window-properties)
-  - [Window Methods](#window-methods)
-  - [Navigator Properties](#navigator-properties)
-  - [Location Object](#location-object)
-- [17. Console Properties](#console-properties)
+- [15. Console Properties](#console-properties)
   - [Common Console Properties](#common-console-properties)
   - [Advanced Console Methods](#advanced-console-methods)
-- [18. Navigator Object](#18-navigator-object)
-    - [Navigator Properties](#navigator-properties)
-    - [Navigator Methods](#navigator-methods)
+- [16. Navigator Object](#18-navigator-object)
+  - [Navigator Properties](#navigator-properties)
+  - [Navigator Methods](#navigator-methods)
 ---
 
 
@@ -806,195 +796,10 @@ link.addEventListener("click", (event) => {
 });
 ```
 
+---
+
 
 ## **14. Window Properties and Methods**
-### **Window Properties**
-
-| **Property**        | **Description**                                   |
-|---------------------|---------------------------------------------------|
-| `window`            | The global window object itself.                  |
-| `innerHeight`       | Height of the viewport in pixels.                 |
-| `innerWidth`        | Width of the viewport in pixels.                  |
-| `outerHeight`       | Height of the window including browser chrome.    |
-| `outerWidth`        | Width of the window including browser chrome.     |
-| `screenX`           | Horizontal position of the window relative to the screen. |
-| `screenY`           | Vertical position of the window relative to the screen.   |
-| `location`          | Provides information about the URL of the window. |
-| `history`           | Provides access to the browser's session history. |
-| `navigator`         | Provides information about the browser and device.|
-| `localStorage`      | Provides access to the browser's local storage.   |
-| `sessionStorage`    | Provides access to the browser's session storage. |
-| `performance`       | Provides performance-related information.         |
-| `document`          | The DOM document object of the current page.      |
-
-### Examples:
-```javascript
-console.log(window.innerHeight); // Logs the viewport height
-console.log(window.location.href); // Logs the current URL
-console.log(window.navigator.userAgent); // Logs browser details
-```
-
----
-
-### **Window Methods**
-
-| **Method**          | **Description**                                   |
-|---------------------|---------------------------------------------------|
-| `alert()`           | Displays an alert dialog.                         |
-| `confirm()`         | Displays a confirmation dialog.                   |
-| `prompt()`          | Displays a dialog to accept user input.           |
-| `open()`            | Opens a new browser tab or window.                |
-| `close()`           | Closes the current window.                        |
-| `focus()`           | Brings the window to the foreground.              |
-| `blur()`            | Removes focus from the window.                    |
-| `scrollTo()`        | Scrolls to a specified position in the window.    |
-| `setTimeout()`      | Executes a function after a specified delay.      |
-| `clearTimeout()`    | Cancels a timeout set with `setTimeout()`.        |
-| `setInterval()`     | Executes a function at specified intervals.       |
-| `clearInterval()`   | Cancels an interval set with `setInterval()`.     |
-| `requestAnimationFrame()` | Requests a frame for performing animations. |
-| `cancelAnimationFrame()` | Cancels an animation frame request.          |
-
-### Examples:
-```javascript
-window.alert("Hello, World!");
-const timer = setTimeout(() => console.log("Executed after 2 seconds"), 2000);
-clearTimeout(timer); // Cancels the timeout
-```
-
----
-
-### **Navigator Properties**
-
-| **Property**        | **Description**                                   |
-|---------------------|---------------------------------------------------|
-| `userAgent`         | Returns the user agent string for the browser.    |
-| `platform`          | Provides information about the platform (OS).     |
-| `language`          | Returns the browser's language setting.           |
-| `onLine`            | Indicates if the browser is online.               |
-
-### Examples:
-```javascript
-console.log(window.navigator.userAgent); // Logs browser's user agent
-console.log(window.navigator.language); // Logs browser language
-```
-
----
-
-### **Location Object**
-
-| **Property/Method** | **Description**                                   |
-|---------------------|---------------------------------------------------|
-| `href`              | Gets or sets the entire URL of the window.        |
-| `reload()`          | Reloads the current document.                     |
-| `replace()`         | Replaces the current document with a new one.     |
-| `assign()`          | Loads a new document.                             |
-
-### Examples:
-```javascript
-console.log(window.location.href); // Logs current URL
-window.location.reload(); // Reloads the page
-```
-
----
-
-## **15. Event Handling**
-### **Common Events**
-
-| **Event**           | **Description**                                   |
-|---------------------|---------------------------------------------------|
-| `click`             | Triggered when an element is clicked.             |
-| `dblclick`          | Triggered when an element is double-clicked.      |
-| `mouseover`         | Triggered when the mouse pointer is over an element. |
-| `mouseout`          | Triggered when the mouse pointer leaves an element. |
-| `keydown`           | Triggered when a key is pressed.                  |
-| `keyup`             | Triggered when a key is released.                 |
-| `change`            | Triggered when the value of an input element changes. |
-| `submit`            | Triggered when a form is submitted.               |
-
-### Examples:
-```javascript
-const button = document.querySelector(".btn");
-
-// Click event
-button.addEventListener("click", () => {
-  console.log("Button clicked!");
-});
-
-// Keydown event
-document.addEventListener("keydown", (event) => {
-  console.log(`Key pressed: ${event.key}`);
-});
-```
-
----
-
-### **Event Propagation**
-
-| **Phase**           | **Description**                                   |
-|---------------------|---------------------------------------------------|
-| Capturing Phase     | Events propagate from the root to the target element. |
-| Target Phase        | The event reaches the target element.             |
-| Bubbling Phase      | Events propagate back from the target to the root. |
-
-### Examples:
-```javascript
-const parent = document.getElementById("parent");
-const child = document.getElementById("child");
-
-// Event capturing
-parent.addEventListener(
-  "click",
-  () => console.log("Parent (capturing)"),
-  true // Use capturing phase
-);
-
-// Event bubbling
-child.addEventListener("click", () => console.log("Child (bubbling)"));
-```
-
----
-
-### **Event Delegation**
-
-| **Concept**         | **Description**                                   |
-|---------------------|---------------------------------------------------|
-| Delegation          | Use a parent element to handle events for its children. |
-
-### Examples:
-```javascript
-const list = document.getElementById("list");
-
-list.addEventListener("click", (event) => {
-  if (event.target.tagName === "LI") {
-    console.log(`Clicked on item: ${event.target.textContent}`);
-  }
-});
-```
-
----
-
-### **Preventing Default Behavior**
-
-| **Method**          | **Description**                                   |
-|---------------------|---------------------------------------------------|
-| `event.preventDefault()` | Prevents the default action of an event.     |
-
-### Examples:
-```javascript
-const link = document.querySelector("a");
-
-link.addEventListener("click", (event) => {
-  event.preventDefault();
-  console.log("Link click prevented.");
-});
-```
-
-
----
-
-
-## **16. Window Properties and Methods**
 
 ### **Window Properties**
 
@@ -1126,7 +931,7 @@ window.location.replace("https://example.com"); // Replaces the current URL
 
 
 
-## **17. Console Properties**
+## **15. Console Properties**
 
 The `console` object provides various methods and properties for logging, debugging, and interacting with the browser's console.
 
@@ -1238,7 +1043,7 @@ console.count("apple"); // Logs: apple: 1
 ---
 
 
-## **18. Navigator Object**
+## **16. Navigator Object**
 ### **Navigator Properties**
 
 | **Property**         | **Description**                                   |
