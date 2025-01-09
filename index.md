@@ -6,6 +6,7 @@
 # JavaScript CookBook
 
 ## **1. Variables**
+
 | **Keyword**         | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `var`               | Function-scoped variable, can be reassigned.      |
@@ -22,6 +23,7 @@ const z = 30;      // Constant
 ---
 
 ## **2. Data Types**
+
 | **Type**            | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `String`           | Represents textual data.                           |
@@ -47,6 +49,7 @@ let big = 123n;      // BigInt
 
 ## **3. Operators**
 ### **Arithmetic Operators**
+
 | **Operator**        | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `+`                 | Addition                                          |
@@ -57,6 +60,7 @@ let big = 123n;      // BigInt
 | `**`                | Exponentiation                                    |
 
 ### **Comparison Operators**
+
 | **Operator**        | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `==`                | Equal to (loose comparison).                      |
@@ -69,6 +73,7 @@ let big = 123n;      // BigInt
 | `<=`                | Less than or equal to.                            |
 
 ### **Logical Operators**
+
 | **Operator**        | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `&&`               | Logical AND.                                       |
@@ -85,6 +90,7 @@ console.log(!(5 > 3));         // false
 ---
 
 ## **4. Control Structures**
+
 | **Structure**       | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `if` / `else`       | Conditional execution based on boolean expressions. |
@@ -117,6 +123,7 @@ for (let i = 0; i < 5; i++) {
 ---
 
 ## **5. Functions**
+
 | **Type**            | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `function`          | Declares a named function.                        |
@@ -138,6 +145,7 @@ const multiply = (a, b) => a * b;
 ---
 
 ## **6. Arrays**
+
 | **Method**          | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `push`              | Adds an element to the end of the array.          |
@@ -171,6 +179,7 @@ let sum = arr.reduce((acc, val) => acc + val, 0);  // 6
 
 ## **7. Objects**
 ### **Creation**
+
 | **Method**          | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | Object Literal      | Creates an object using curly braces `{}`.        |
@@ -206,6 +215,7 @@ const dog = new Animal("Dog");
 ---
 
 ### **Access**
+
 | **Method**          | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | Dot Notation        | Access properties using `.` syntax.               |
@@ -230,6 +240,7 @@ console.log(name, age);  // "Alice", 25
 ---
 
 ### **Modification**
+
 | **Method**          | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | Add Property        | Add a new property to an object.                  |
@@ -272,6 +283,7 @@ console.log(Object.assign({}, obj)); // { a: 1, b: 2 }
 
 ## **8. Classes**
 ### **Definition**
+
 | **Component**       | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `class`             | Declares a new class.                             |
@@ -300,6 +312,7 @@ john.greet();  // "Hello, my name is John."
 ---
 
 ### **Inheritance**
+
 | **Component**       | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `extends`           | Creates a subclass that inherits properties and methods. |
@@ -335,6 +348,7 @@ rex.speak();  // "Rex barks."
 ---
 
 ### **Static Methods and Properties**
+
 | **Component**       | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `static`            | Defines methods or properties that belong to the class, not instances. |
@@ -377,6 +391,7 @@ window.addEventListener("load", () => console.log("Page loaded"));
 
 ## **9. Modules**
 ### **Exporting Modules**
+
 | **Keyword**         | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `export`            | Exports variables, functions, or classes from a module. |
@@ -399,6 +414,7 @@ export default function subtract(a, b) {
 ---
 
 ### **Importing Modules**
+
 | **Keyword**         | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `import`            | Imports variables, functions, or classes from a module. |
@@ -418,6 +434,7 @@ console.log(subtract(5, 3));  // 2
 ---
 
 ### **Dynamic Imports**
+
 | **Keyword**         | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `import()`          | Dynamically loads a module at runtime.            |
@@ -437,6 +454,7 @@ import('./math.js').then(module => {
 
 ## **10. Asynchronous Programming**
 ### **Promises**
+
 | **Method**          | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `then`              | Executes a function when the promise is resolved. |
@@ -458,6 +476,7 @@ promise
 ---
 
 ### **Async/Await**
+
 | **Keyword**         | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `async`             | Declares an asynchronous function.                |
@@ -481,6 +500,7 @@ fetchData();
 ---
 
 ### **Callbacks**
+
 | **Concept**         | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | Callback Function   | A function passed as an argument to another function, executed later. |
@@ -501,6 +521,7 @@ fetchData(data => console.log(data));  // { name: "Alice", age: 30 }
 
 ## **11. Error Handling**
 ### **try/catch/finally**
+
 | **Block**           | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `try`               | Defines a block of code to test for errors.       |
@@ -522,6 +543,7 @@ try {
 ---
 
 ### **Throwing Errors**
+
 | **Keyword**         | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `throw`             | Throws a custom error.                            |
@@ -547,6 +569,7 @@ try {
 
 ## **12. DOM Manipulation**
 ### **Selecting Elements**
+
 | **Method**                         | **Description**                                    |
 |------------------------------------|----------------------------------------------------|
 | `document.getElementById()`        | Selects an element by its ID.                      |
@@ -565,6 +588,7 @@ console.log(items[0]);
 ---
 
 ### **Modifying Elements**
+
 | **Property/Method**                | **Description**                                    |
 |------------------------------------|----------------------------------------------------|
 | `textContent`                      | Sets or gets the text content of an element.       |
@@ -586,6 +610,7 @@ button.removeAttribute("disabled"); // Removes 'disabled' attribute
 ---
 
 ### **Creating and Appending Elements**
+
 | **Method**                         | **Description**                                    |
 |------------------------------------|----------------------------------------------------|
 | `document.createElement()`         | Creates a new element.                             |
@@ -608,6 +633,7 @@ parent.insertBefore(newItem, parent.firstChild);
 ---
 
 ### **Event Listeners**
+
 | **Method**                         | **Description**                                    |
 |------------------------------------|----------------------------------------------------|
 | `addEventListener()`               | Attaches an event handler to an element.           |
@@ -630,6 +656,7 @@ button.removeEventListener("click", handleClick);
 
 ## **13. Event Handling**
 ### **Common Events**
+
 | **Event**           | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `click`             | Triggered when an element is clicked.             |
@@ -659,6 +686,7 @@ document.addEventListener("keydown", (event) => {
 ---
 
 ### **Event Propagation**
+
 | **Phase**           | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | Capturing Phase     | Events propagate from the root to the target element. |
@@ -684,6 +712,7 @@ child.addEventListener("click", () => console.log("Child (bubbling)"));
 ---
 
 ### **Event Delegation**
+
 | **Concept**         | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | Delegation          | Use a parent element to handle events for its children. |
@@ -702,6 +731,7 @@ list.addEventListener("click", (event) => {
 ---
 
 ### **Preventing Default Behavior**
+
 | **Method**               | **Description**                                   |
 |--------------------------|---------------------------------------------------|
 | `event.preventDefault()` | Prevents the default action of an event.          |
@@ -719,6 +749,7 @@ link.addEventListener("click", (event) => {
 
 ## **14. Window Properties and Methods**
 ### **Window Properties**
+
 | **Property**        | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `window`            | The global window object itself.                  |
@@ -746,6 +777,7 @@ console.log(window.navigator.userAgent); // Logs browser details
 ---
 
 ### **Window Methods**
+
 | **Method**          | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `alert()`           | Displays an alert dialog.                         |
@@ -773,6 +805,7 @@ clearTimeout(timer); // Cancels the timeout
 ---
 
 ### **Navigator Properties**
+
 | **Property**        | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `userAgent`         | Returns the user agent string for the browser.    |
@@ -789,6 +822,7 @@ console.log(window.navigator.language); // Logs browser language
 ---
 
 ### **Location Object**
+
 | **Property/Method** | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `href`              | Gets or sets the entire URL of the window.        |
@@ -802,8 +836,11 @@ console.log(window.location.href); // Logs current URL
 window.location.reload(); // Reloads the page
 ```
 
----## **13. Event Handling**
+---
+
+## **13. Event Handling**
 ### **Common Events**
+
 | **Event**           | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `click`             | Triggered when an element is clicked.             |
@@ -833,6 +870,7 @@ document.addEventListener("keydown", (event) => {
 ---
 
 ### **Event Propagation**
+
 | **Phase**           | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | Capturing Phase     | Events propagate from the root to the target element. |
@@ -858,6 +896,7 @@ child.addEventListener("click", () => console.log("Child (bubbling)"));
 ---
 
 ### **Event Delegation**
+
 | **Concept**         | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | Delegation          | Use a parent element to handle events for its children. |
@@ -876,6 +915,7 @@ list.addEventListener("click", (event) => {
 ---
 
 ### **Preventing Default Behavior**
+
 | **Method**          | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `event.preventDefault()` | Prevents the default action of an event.     |
@@ -897,6 +937,7 @@ link.addEventListener("click", (event) => {
 ## **14. Window Properties and Methods**
 
 ### **Window Properties**
+
 | **Property**        | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `window`            | The global window object itself.                  |
@@ -933,6 +974,7 @@ console.log(window.document.title); // Logs the title of the document
 ---
 
 ### **Window Methods**
+
 | **Method**          | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `alert()`           | Displays an alert dialog.                         |
@@ -985,6 +1027,7 @@ window.cancelAnimationFrame(animationId); // Cancels the animation frame
 ---
 
 ### **Navigator Properties**
+
 | **Property**        | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `userAgent`         | Returns the user agent string for the browser.    |
@@ -1003,6 +1046,7 @@ console.log(window.navigator.onLine); // Logs true if the browser is online
 ---
 
 ### **Location Object**
+
 | **Property/Method** | **Description**                                   |
 |---------------------|---------------------------------------------------|
 | `href`              | Gets or sets the entire URL of the window.        |
