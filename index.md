@@ -1,30 +1,67 @@
-# Cookbook: JavaScript
+# JavaScript CookBook
 
 - [Basics](https://androcado.github.io/cookbook-javascript)
 - [Window Properties](https://androcado.github.io/cookbook-javascript/global-variables)
 
-# JavaScript CookBook
+
+---
+
 
 # Table of Contents
 - [1. Variables](#1-variables)
 - [2. Data Types](#2-data-types)
-  - [Feature 1](#feature-1)
-  - [Feature 2](#feature-2)
 - [3. Operators](#3-operators)
+  - [Arithmetic Operators](#arithmetic-operators)
+  - [Comparison Operators](#comparison-operators)
+  - [Logical Operators](#logical-operators)
 - [4. Control Structures](#4-control-structures)
 - [6. Arrays](#6-arrays)
 - [7. Objects](#7-objects)
+  - [Creation](#creation)
+  - [Access](#access)
+  - [Modification](#modification)
 - [8. Classes](#8-classes)
+  - [Definition](#definition)
+  - [Inheritance](#inheritance)
+  - [Static Methods and Properties](#static-methods-and-properties)
 - [9. Modules](#9-modules)
+  - [Exporting Modules](#exporting-modules)
+  - [Importing Modules](#importing-modules)
+  - [Dynamic Imports](#dynamic-imports)
 - [10. Asynchronous Programming](#10-asynchronous-programming)
+  - [Promises](#promises)
+  - [Async/Await](#async-await)
+  - [Callbacks](#callbacks)
 - [11. Error Handling](#11-error-handling)
+  - [try/catch/finally](#try-catch-finally)
+  - [Throwing Errors](#throwing-errors)
 - [12. DOM Manipulation](#12-dom-manipulation)
+  - [Selecting Elements](#selecting-elements)
+  - [Modifying Elements](#modifying-elements)
+  - [Creating and Appending Elements](#creating-and-appending-elements)
+  - [Event Listeners](#event-listeners)
 - [13. Event Handlingn](#13-event-handling)
+  - [Common Events](#common-events)
+  - [Event Propagation](#event-propagation)
+  - [Event Delegation](#event-delegation)
+  - [Preventing Default Behavior](#preventing-default-behavior)
 - [14. Window Properties and Methods](#14-window-properties-and-methods)
+  - [Window Properties](#window-properties)
+  - [Window Methods](#window-methods)
+  - [Navigator Properties](#navigator-properties)
+  - [Location Object](#location-object)
 - [15. Event Handling](#15-event-handling)
+  - [Common Events](#common-events)
+  - [Event Propagation](#event-propagation)
+  - [Event Delegation](#event-delegation)
+  - [Preventing Default Behavior](#preventing-default-behavior)
 - [16. Window Properties and Methods](#16-window-properties-and-methods)
+  - [Window Properties](#window-properties)
+  - [Window Methods](#window-methods)
+  - [Navigator Properties](#navigator-properties)
+  - [Location Object](#location-object)
 
-
+  
 ---
 
 
@@ -160,10 +197,6 @@ function add(a, b) {
 
 const multiply = (a, b) => a * b;
 ```
-
-
-
-
 
 ---
 
