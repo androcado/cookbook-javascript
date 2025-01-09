@@ -60,8 +60,10 @@
   - [Window Methods](#window-methods)
   - [Navigator Properties](#navigator-properties)
   - [Location Object](#location-object)
+- [17. Console Properties](#console-properties)
+  - [Common Console Properties](#common-console-properties)
+  - [Advanced Console Methods](#advanced-console-methods)
 
-  
 ---
 
 
@@ -1117,5 +1119,120 @@ window.location.reload(); // Reloads the current page
 window.location.assign("https://example.com"); // Navigates to a new URL
 window.location.replace("https://example.com"); // Replaces the current URL
 ```
+
+---
+
+
+
+## **17. Console Properties**
+
+The `console` object provides various methods and properties for logging, debugging, and interacting with the browser's console.
+
+---
+
+### **Common Console Properties**
+| **Property**           | **Description**                                   |
+|------------------------|---------------------------------------------------|
+| `console.memory`       | Provides information about the memory usage of the JavaScript heap. |
+| `console.timeLog()`    | Logs the current value of a timer initialized with `console.time()`. |
+| `console.log()`        | Outputs a message to the console.                |
+| `console.info()`       | Outputs an informational message.                |
+| `console.warn()`       | Outputs a warning message.                       |
+| `console.error()`      | Outputs an error message.                        |
+| `console.clear()`      | Clears the console.                              |
+| `console.table()`      | Displays data as a table in the console.         |
+| `console.group()`      | Creates a new inline group in the console.       |
+| `console.groupEnd()`   | Exits the inline group.                          |
+
+### Examples:
+```javascript
+console.log("This is a log message.");       // Standard log
+console.info("This is an info message.");    // Informational log
+console.warn("This is a warning!");          // Warning message
+console.error("This is an error!");          // Error message
+
+console.clear(); // Clears the console
+
+
+const fruits = [
+    { name: "Apple", color: "Red" },
+    { name: "Banana", color: "Yellow" },
+    { name: "Grape", color: "Purple" }
+];
+console.table(fruits);
+// Displays a table in the console:
+// ┌─────────┬────────────┬──────────┐
+// │ (index) │   name     │  color   │
+// ├─────────┼────────────┼──────────┤
+// │    0    │  "Apple"   │  "Red"   │
+// │    1    │  "Banana"  │ "Yellow" │
+// │    2    │  "Grape"   │ "Purple" │
+// └──
+
+
+console.group("Fruits");
+console.log("Apple");
+console.log("Banana");
+console.log("Grape");
+console.groupEnd();
+// Logs:
+// > Fruits
+//   Apple
+//   Banana
+//   Grape
+
+
+console.time("process");      // Starts the timer
+setTimeout(() => {
+    console.timeLog("process"); // Logs elapsed time
+    console.timeEnd("process"); // Ends the timer
+}, 1000);
+
+
+console.log(console.memory);
+// Logs memory information, e.g.:
+// { jsHeapSizeLimit: 2190000000, totalJSHeapSize: 45000000, usedJSHeapSize: 40000000 }
+```
+
+### **Advanced Console Methods**
+| **Property**           | **Description**                                   |
+|------------------------|---------------------------------------------------|
+| `console.trace()`      | Outputs a stack trace of function calls.          |
+| `console.assert()`     | Logs an error if the assertion is false.          |
+| `console.count()`      | Logs the number of times a specific string is logged. |
+| `console.countReset()` | Resets the count for a specific string.           |
+
+### Examples:
+```javascript
+function first() {
+    second();
+}
+function second() {
+    console.trace("Trace stack");
+// Logs:
+// Trace stack
+// at second (script.js:6)
+// at first (script.js:2)
+// at script.js:9
+}
+first();
+
+
+console.assert(1 === 2, "Assertion failed: 1 is not equal to 2");
+// Logs:
+// Assertion failed: 1 is not equal to 2
+
+
+console.count("apple"); // Logs: apple: 1
+console.count("banana"); // Logs: banana: 1
+console.count("apple"); // Logs: apple: 2
+console.countReset("apple"); // Resets the count for "apple"
+console.count("apple"); // Logs: apple: 1
+
+```
+
+
+
+
 
 ---
