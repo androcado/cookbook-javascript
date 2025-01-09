@@ -63,7 +63,9 @@
 - [17. Console Properties](#console-properties)
   - [Common Console Properties](#common-console-properties)
   - [Advanced Console Methods](#advanced-console-methods)
-
+- [18. Navigator Object](#18-navigator-object)
+    - [Navigator Properties](#navigator-properties)
+    - [Navigator Methods](#navigator-methods)
 ---
 
 
@@ -1131,6 +1133,7 @@ The `console` object provides various methods and properties for logging, debugg
 ---
 
 ### **Common Console Properties**
+
 | **Property**           | **Description**                                   |
 |------------------------|---------------------------------------------------|
 | `console.memory`       | Provides information about the memory usage of the JavaScript heap. |
@@ -1195,6 +1198,7 @@ console.log(console.memory);
 ```
 
 ### **Advanced Console Methods**
+
 | **Property**           | **Description**                                   |
 |------------------------|---------------------------------------------------|
 | `console.trace()`      | Outputs a stack trace of function calls.          |
@@ -1231,8 +1235,106 @@ console.count("apple"); // Logs: apple: 1
 
 ```
 
+---
 
 
+## **18. Navigator Object**
+### **Navigator Properties**
 
+| **Property**         | **Description**                                   |
+|----------------------|---------------------------------------------------|
+| `navigator.userAgent` | Returns the user agent string of the browser.    |
+| `navigator.platform`  | Returns the platform (operating system) of the browser. |
+| `navigator.language`  | Returns the browser's language setting (e.g., `en-US`). |
+| `navigator.onLine`    | Returns `true` if the browser is online; otherwise `false`. |
+| `navigator.cookieEnabled` | Returns `true` if cookies are enabled in the browser. |
+| `navigator.vendor`    | Returns the name of the browser's vendor.        |
+| `navigator.product`   | Returns the product name of the browser (usually `Gecko`). |
+| `navigator.hardwareConcurrency` | Returns the number of logical CPU cores available. |
+| `navigator.maxTouchPoints` | Returns the maximum number of simultaneous touch points. |
 
 ---
+
+#### **Examples**
+```javascript
+console.log(navigator.userAgent);
+// Logs: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36
+
+console.log(navigator.platform);
+// Logs: "Win32", "MacIntel", or "Linux x86_64" depending on the user's OS.
+
+console.log(navigator.language);
+// Logs: "en-US", "de-DE", or another language code.
+
+if (navigator.onLine) {
+  console.log("You are online!");
+} else {
+  console.log("You are offline!");
+}
+
+if (navigator.cookieEnabled) {
+  console.log("Cookies are enabled.");
+} else {
+  console.log("Cookies are disabled.");
+}
+
+console.log(navigator.vendor);
+// Logs: "Google Inc." for Chrome, or another vendor name for different browsers.
+
+console.log(navigator.hardwareConcurrency);
+// Logs: Number of logical CPU cores available (e.g., 8 for an octa-core CPU).
+
+```
+
+### **Navigator Methods**
+
+| **Property**         | **Description**                                   |
+|----------------------|---------------------------------------------------|
+| `navigator.geolocation` | Provides access to the Geolocation API.    |
+| `navigator.mediaDevices`  | Provides access to media devices like cameras and microphones. |
+| `navigator.clipboard`  | Provides access to the Clipboard API. |
+| `navigator.vibrate()`    | Vibrates the device for a given duration (supported on some devices). |
+
+#### **Examples**
+```javascript
+if ("geolocation" in navigator) {
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      console.log(`Latitude: ${position.coords.latitude}`);
+      console.log(`Longitude: ${position.coords.longitude}`);
+    },
+    (error) => {
+      console.error("Error retrieving location:", error.message);
+    }
+  );
+} else {
+  console.log("Geolocation is not supported by your browser.");
+}
+
+
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+    .then((stream) => {
+      console.log("Access granted to media devices.");
+    })
+    .catch((error) => {
+      console.error("Error accessing media devices:", error.message);
+    });
+} else {
+  console.log("Media devices are not supported.");
+}
+
+
+navigator.clipboard.writeText("Hello, Clipboard!")
+  .then(() => console.log("Text copied to clipboard"))
+  .catch((error) => console.error("Clipboard error:", error));
+
+
+  if (navigator.vibrate) {
+    navigator.vibrate([200, 100, 200]); // Vibrates for 200ms, pauses for 100ms, vibrates for 200ms
+    console.log("Vibration triggered!");
+  } else {
+    console.log("Vibration is not supported on this device.");
+  }
+
+```
